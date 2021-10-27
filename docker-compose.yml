@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    image: ruby:2.7.1 
+    command: sh -c "apt update && bundle install && rails s -b 0.0.0.0"
+    ports:
+      - '3002:3000'
+    volumes:
+      - .:/app
+    working_dir: /app
+
+
+  redis:
+    image: redis
