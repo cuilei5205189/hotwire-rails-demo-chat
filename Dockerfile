@@ -1,7 +1,7 @@
 FROM ruby:2.7.1
 RUN apt-get update -yqq
 WORKDIR /app
-COPY ./Gemfile* /app
+COPY ./Gemfile* /app/
 RUN bundle install
 RUN rails db:setup && rails db:migrate
 COPY ./ /app/
