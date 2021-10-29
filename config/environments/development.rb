@@ -10,6 +10,7 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+  config.host =   IPAddr.new("0.0.0.0/0"), # All IPv4 addresses.
 
   # Show full error reports.
   config.consider_all_requests_local = true
